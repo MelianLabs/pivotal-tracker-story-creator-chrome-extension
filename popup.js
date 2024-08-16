@@ -66,6 +66,7 @@ function populateProjectDropdown(projects) {
 function createTicket() {
   const title = document.getElementById("title").value;
   const description = document.getElementById("description").value;
+  const storyType = document.getElementById("storyType").value;
   const projectId = document.getElementById("projectDropdown").value;
 
   if (!title) {
@@ -91,18 +92,18 @@ function createTicket() {
 
       chrome.runtime.sendMessage({ action: "captureScreenshot" }, (response) => {
         const screenshot = response.screenshot;
-        createPivotalTrackerTicket(apiToken, projectId, title, description, url.href, screenshot, label);
+        createPivotalTrackerStory(apiToken, projectId, title, description, storyType, url.href, screenshot, label);
       });
     });
   });
 }
 
-function createPivotalTrackerTicket(apiToken, projectId, title, description, url, screenshot, label) {
+function createPivotalTrackerStory(apiToken, projectId, title, description, storyType, url, screenshot, label) {
   const payload = {
     name: title,
     description: `${description}\n\nURL: ${url}`,
     labels: label ? ["chrome-extension", label] : ["chrome-extension"],
-    story_type: "feature",
+    story_type: storyType,
   };
 
   fetch(`https://www.pivotaltracker.com/services/v5/projects/${projectId}/stories`, {

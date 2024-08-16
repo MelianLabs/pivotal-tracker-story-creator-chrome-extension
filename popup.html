@@ -15,7 +15,13 @@
       margin-bottom: 20px;
     }
 
+    h4 {
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }
+
     input, textarea, select, button {
+      font-family: Arial, sans-serif;
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -58,9 +64,17 @@
   </div>
 
   <div id="ticketSection" style="display:none;">
+    <h4>Pivotal Tracker Project *</h4>
     <select id="projectDropdown"></select>
+    <h4>Type *</h4>
+    <select id="storyType">
+      <option value="bug">Bug</option>
+      <option value="feature">Feature</option>
+    </select>
+    <h4>Title *</h4>
     <input type="text" id="title" placeholder="Enter story title" required>
-    <textarea id="description" placeholder="Enter story description" required></textarea>
+    <h4>Description</h4>
+    <textarea id="description" placeholder="use shift + enter for new line"></textarea>
     <button id="createTicket">Create Ticket</button>
   </div>
 
