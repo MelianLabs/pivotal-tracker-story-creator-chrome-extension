@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Pivotal Tracker Ticket</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      width: 350px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Create Pivotal Tracker Ticket</h1>
+
+  <div id="loginSection">
+    <input type="text" id="apiToken" placeholder="Enter your Pivotal Tracker API token" required>
+    <button id="login">Login</button>
+  </div>
+
+  <div id="ticketSection" style="display:none;">
+    <select id="projectDropdown"></select>
+    <input type="text" id="title" placeholder="Enter story title" required>
+    <textarea id="description" placeholder="Enter story description" required></textarea>
+    <button id="createTicket">Create Ticket</button>
+  </div>
+
+  <p id="status"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
