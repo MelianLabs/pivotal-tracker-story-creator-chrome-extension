@@ -13,7 +13,7 @@ This Chrome extension allows you to quickly create stories in Pivotal Tracker di
 ### Method 1: Installation Using `.crx` File
 
 1. **Download the `.crx` File**:
-   - Download the `.crx` file from the following link: [Pivotal Tracker Story Creator `.crx` Download](https://github.com/MelianLabs/pivotal-tracker-story-creator-chrome-extension/releases/latest/download/pivotal-tracker-story-creator-chrome-extension.crx).
+   - Download the `.crx` file from the following link: [Pivotal Tracker Story Creator `.crx` Download](https://github.com/MelianLabs/pivotal-tracker-story-creator-chrome-extension/raw/main/releases/latest/download/pivotal-tracker-story-creator-chrome-extension.crx).
 
 2. **Install the Extension**:
    - Drag and drop the `.crx` file into the Chrome `chrome://extensions/` page.
